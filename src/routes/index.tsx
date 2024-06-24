@@ -1,11 +1,10 @@
-import { Routes } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-function RoutesApp() {
+export function RoutesApp() {
   return(
     <Routes>
-      
+      <Route path='main' element={<p> Initial Page </p>}></Route>
+      <Route path='*' element={<Navigate to='/main'/>}></Route>
     </Routes>
   )
 }
-
-export default RoutesApp
