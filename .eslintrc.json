@@ -1,43 +1,50 @@
 {
-  "env": {
+    "env": {
       "browser": true,
-      "es2021": true
-  },
-  "extends": [
+      "es2021": true,
+      "node": true
+    },
+    "extends": [
       "eslint:recommended",
       "plugin:react/recommended",
       "plugin:@typescript-eslint/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
       "ecmaFeatures": {
-          "jsx": true
+        "jsx": true
       },
-      "ecmaVersion": 13,
+      "ecmaVersion": 2023,
       "sourceType": "module"
-  },
-  "plugins": [
+    },
+    "plugins": [
       "react",
-      "@typescript-eslint"
-  ],
-  "rules": {
+      "@typescript-eslint",
+      "react-hooks"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "rules": {
       "indent": [
-          "error",
-          2
+        "error",
+        2
       ],
       "linebreak-style": [
-          "error",
-          "unix"
+        "error",
+        "unix"
       ],
-      "quotes": [
-          "error",
-          "single"
-      ],
+      "quotes": "off",
       "semi": [
-          "error",
-          "always"
+        "error",
+        "always"
       ],
       "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off"
+      "react/react-in-jsx-scope": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   }
-}
+  
